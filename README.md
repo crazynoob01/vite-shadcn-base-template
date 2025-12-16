@@ -108,31 +108,6 @@ vite-shadcn-template/
 └── vite.config.ts # Vite configuration
 ```
 
-## Component Inspector
-
-This template includes a component inspector to help you debug and inspect React components in real-time.
-
-The inspector is automatically enabled in development mode and can be accessed through the browser. It allows you to:
-
-- Inspect component hierarchy
-- View component props and state
-- Debug component rendering
-
-You can configure the inspector using the following environment variables:
-
-- `VITE_INSPECTOR_URL` - Custom URL for the inspector
-
-## Environment Variables
-
-Create a `.env` file in the root directory to customize configurations:
-
-```
-# Inspector configuration
-VITE_INSPECTOR_HOST=localhost
-VITE_INSPECTOR_PORT=3004
-VITE_INSPECTOR_URL=https://cdn.libra.dev
-```
-
 ## Contributing
 
 Contributions are welcome! Feel free to submit a Pull Request.
@@ -149,4 +124,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Built with ❤️ by [Libra](https://libra.dev)
