@@ -44,6 +44,12 @@ export function RSVPForm() {
       return
     }
 
+    if (!formData.phone) {
+      setError('Phone number is required.')
+      setIsSubmitting(false)
+      return
+    }
+
     try {
       const response = await fetch(`${API_BASE}/api/rsvp/${PROJECT_ID}/submit`, {
         method: 'POST',
@@ -73,9 +79,7 @@ export function RSVPForm() {
         <p className="text-muted-foreground">
           {formData.attendance === 'attending'
             ? "We can't wait to see you!"
-            : formData.attendance === 'not_attending'
-              ? "We'll miss you!"
-              : 'Please let us know when you decide!'}
+            : "We'll miss you!"}
         </p>
       </div>
     )
@@ -106,13 +110,23 @@ export function RSVPForm() {
             <SelectContent>
               <SelectItem value="groom">Groom</SelectItem>
               <SelectItem value="bride">Bride</SelectItem>
-              <SelectItem value="both">Both</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                  id="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  placeholder="+1 (555) 000-0000"
+              />
+          </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
           <Input
@@ -121,16 +135,6 @@ export function RSVPForm() {
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="john@example.com"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone Number</Label>
-          <Input
-            id="phone"
-            type="tel"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            placeholder="+1 (555) 000-0000"
           />
         </div>
       </div>
@@ -148,10 +152,6 @@ export function RSVPForm() {
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="not_attending" id="not_attending" />
             <Label htmlFor="not_attending">Sorry, I can't make it</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="maybe" id="maybe" />
-            <Label htmlFor="maybe">Not sure yet</Label>
           </div>
         </RadioGroup>
       </div>
