@@ -12,7 +12,8 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-// Project ID injected during build/generation
+// Project ID for RSVP submissions.
+// This should be replaced with the actual project ID during site generation.
 const PROJECT_ID = '__PROJECT_ID__'
 const API_BASE = 'https://gatherlane.com'
 
