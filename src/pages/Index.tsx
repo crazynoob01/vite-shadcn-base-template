@@ -1,7 +1,8 @@
 const Index = () => {
   return (
-    <div className="min-h-screen">
-        <div className="text-2xl font-bold">GatherLane AI</div>
+    <div>
+        <div>GatherLane AI</div>
+        Plan your day with a calm, focused assistant built for real-world event.
       {/* Navbar Section */}
 
       {/* Hero Section */}
