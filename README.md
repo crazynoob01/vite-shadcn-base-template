@@ -1,64 +1,28 @@
-# Vite React Base Template
+# Vite + React + Tailwind Base Template
 
-A minimal React + Vite starter with TypeScript, React Router, React Query, and Framer Motion. Styling is handled with plain CSS (no Tailwind or Radix UI).
-
-## Features
-
-- Vite for fast dev/build
-- React + TypeScript
-- React Router for routing
-- React Query for data fetching
-- Framer Motion for animations
-- Custom CSS in `src/index.css` and `src/App.css`
+A minimal starter template with React 19, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Tech Stack
 
-- React
-- Vite
+- React 19
 - TypeScript
-- React Router
-- React Query
+- Vite
+- Tailwind CSS
 - Framer Motion
+- Lucide React Icons
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+
-
-### Installation
-
 ```bash
+# Install dependencies
 npm install
-```
 
-### Development
-
-```bash
+# Start development server
 npm run dev
-```
 
-The app runs at `http://localhost:5173`.
-
-### Production Build
-
-```bash
+# Build for production
 npm run build
+
+# Preview production build
 npm run preview
-```
-
-## Project Structure
-
-```
-vite-shadcn-base-template/
-  src/
-    pages/
-    App.tsx
-    App.css
-    index.css
-    main.tsx
-  index.html
-  package.json
-  tsconfig.json
-  vite.config.ts
 ```

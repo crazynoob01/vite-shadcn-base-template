@@ -1,20 +1,22 @@
-import './App.css'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Index from './pages/Index'
+import React from 'react';
 
-const queryClient = new QueryClient()
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-        </Routes>
-      </BrowserRouter>
+const App: React.FC = () => {
+  return (
+    <div className="min-h-screen font-sans selection:bg-wedding-sage selection:text-white overflow-x-hidden">
+        {/*Navbar*/}
+      <main className="relative">
+          GatherLane AI
+        {/*Hero*/}
+        {/*Story*/}
+        {/*EventDetails*/}
+        {/*Timeline*/}
+        {/*Gallery*/}
+        {/*RSVP*/}
+        {/*FAQ*/}
+      </main>
+      {/*Footer */}
     </div>
-  </QueryClientProvider>
-)
+  );
+};
 
-export default App
+export default App;
