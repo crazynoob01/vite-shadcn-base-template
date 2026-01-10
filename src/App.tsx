@@ -1,4 +1,5 @@
 import React from 'react';
+import { GatherlaneBadge } from './components/GatherlaneBadge';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         {/*FAQ*/}
       </main>
       {/*Footer */}
+      <GatherlaneBadge />
     </div>
   );
 };
