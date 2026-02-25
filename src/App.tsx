@@ -1,12 +1,12 @@
 import React from 'react';
-import { GatherlaneBadge } from './components/GatherlaneBadge';
+import { ConvyaBadge } from './components/ConvyaBadge';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans selection:bg-wedding-sage selection:text-white overflow-x-hidden">
         {/*Navbar*/}
       <main className="relative">
-          GatherLane AI
+          Convya AI
         {/*Hero*/}
         {/*Story*/}
         {/*EventDetails*/}
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         {/*FAQ*/}
       </main>
       {/*Footer */}
-      <GatherlaneBadge />
+      <ConvyaBadge />
     </div>
   );
 };
