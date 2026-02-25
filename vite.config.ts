@@ -9,4 +9,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  optimizeDeps: {
+    // Pre-bundle heavy dependencies at server startup instead of lazily on
+    // first browser request. Without this, lucide-react (1400+ icon exports)
+    // causes multi-second "pending" requests in the Daytona sandbox preview.
+    include: ['lucide-react', 'tailwind-merge', 'framer-motion', 'clsx'],
+  },
 });
