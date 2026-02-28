@@ -8,6 +8,10 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    // Force a single React instance across all dependencies (framer-motion, etc.)
+    // Prevents "Cannot read properties of null (reading 'useContext')" errors
+    // caused by Vite's dependency optimizer bundling a duplicate React copy.
+    dedupe: ['react', 'react-dom'],
   },
   optimizeDeps: {
     // Pre-bundle heavy dependencies at server startup instead of lazily on
